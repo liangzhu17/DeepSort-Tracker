@@ -22,7 +22,7 @@ Additionally, feature generation requires TensorFlow (>= 1.0).
 ## Installation
 First, clone the repository:
 ```
-git clone https://gitlab.itd-services.de/trafficobservation/research/deepsort.git
+git clone ...
 ```
 Then, solve the environments and dependencies
 ```
