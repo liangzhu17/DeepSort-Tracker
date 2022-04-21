@@ -10,17 +10,15 @@ The tracker is a modified version of original Tracker *Simple Online and Realtim
 
 Besides, the self designed evaluation method (in the file filter_gt_track_csv.py) can evaluate the tracking accuracy of occluded vehicles. 
 
-At last, the thesis of this project is in the file Forschungsarbeit.pdf. 
+For more details please read the thesis of this project in Forschungsarbeit.pdf. 
 
 ## Dependencies 
 
 The code is compatible with Python 2.7 and 3. The following dependencies are
 needed to run the tracker:
-
 * NumPy
 * sklearn
 * OpenCV
-
 Additionally, feature generation requires TensorFlow (>= 1.0).
 
 ## Installation
