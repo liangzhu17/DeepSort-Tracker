@@ -4,11 +4,13 @@
 
 This repository contains code for *Simple Online and Realtime Tracking with a Deep Association Metric* (Deep SORT).
 It also contains code from *HOTA (and other) evaluation metrics for Multi-Object Tracking (MOT)*.
-This Deep Sort Tracker implements multiple vehicle tracking based on drone-based data and tracks vehicles in world/camera coordinate systems. This method uses Kalman Filter for prediction vehicles' position and uses a re-ID neural network for generating vehicles' appearance information.
+This Deep Sort Tracker implements multiple vehicle tracking based on drone-based data and tracks vehicles in world/camera coordinate systems. This method uses Kalman Filter for prediction vehicles' position and uses a re-ID neural network for generating vehicles' appearance information, which is in the folder "cosine_metric_learning". 
 
 The tracker is a modified version of original Tracker *Simple Online and Realtime Tracking with a Deep Association Metric* (Deep SORT) in order to increase tracking accuracy of occluded vehicles. 
 
 Besides, the self designed evaluation method (in the file filter_gt_track_csv.py) can evaluate the tracking accuracy of occluded vehicles. 
+
+At last, the thesis of this project is in the file Forschungsarbeit.pdf. 
 
 ## Dependencies 
 
