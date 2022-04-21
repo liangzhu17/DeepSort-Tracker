@@ -3,6 +3,7 @@
 ## Introduction
 
 This repository contains code for *Simple Online and Realtime Tracking with a Deep Association Metric* (Deep SORT).
+It also contains code from *HOTA (and other) evaluation metrics for Multi-Object Tracking (MOT)*.
 
 ## Dependencies 
 
