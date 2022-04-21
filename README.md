@@ -8,6 +8,8 @@ This Deep Sort Tracker implements multiple vehicle tracking based on drone-based
 
 The tracker is a modified version of original Tracker *Simple Online and Realtime Tracking with a Deep Association Metric* (Deep SORT) in order to increase tracking accuracy of occluded vehicles. 
 
+Besides, the self designed evaluation method (in the file filter_gt_track_csv.py) can evaluate the tracking accuracy of occluded vehicles. 
+
 ## Dependencies 
 
 The code is compatible with Python 2.7 and 3. The following dependencies are
