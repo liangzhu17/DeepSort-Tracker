@@ -19,6 +19,7 @@ needed to run the tracker:
 * NumPy
 * sklearn
 * OpenCV
+
 Additionally, feature generation requires TensorFlow (>= 1.0).
 
 ## Installation
