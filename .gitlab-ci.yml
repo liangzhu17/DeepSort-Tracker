@@ -1,0 +1,20 @@
+deploy:
+  stage: build
+  tags:
+  - dockerbuilder
+  before_script:
+  #- 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  #- eval $(ssh-agent -s)
+  #- echo "$DEPLOY_SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  #- mkdir -p ~/.ssh
+  # - chmod 700 ~/.ssh
+  #- ssh-keyscan -t rsa gitlab.itd-services.de >> ~/.ssh/known_hosts
+  - docker info
+  - docker login -u $NEXUS_USERNAME -p $NEXUS_PASSWORD $DOCKER_REGISTRY_TO
+  script:
+  #- echo "$DEPLOY_SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  # https://docs.gitlab.com/ee/user/project/deploy_tokens/index.html#deploy-tokens
+  - curl -u "$NEXUS_USERNAME:$NEXUS_PASSWORD" $NEXUS_RAW_URL/executables/trackerdbi/latest/linux/trackerdbi --output trackerdbi
+  - ls -la    
+  - docker build . -t $DOCKER_REGISTRY_TO/trafficobservation/deepsort
+  - docker push $DOCKER_REGISTRY_TO/trafficobservation/deepsort
