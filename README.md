@@ -21,10 +21,7 @@ needed to run the tracker:
 Additionally, feature generation requires TensorFlow (>= 1.0).
 
 ## Installation
-First, clone the repository:
-```
-git clone ...
-```
+First, clone the repository. 
 Then, solve the environments and dependencies
 ```
 pip install -r requirements.txt 
