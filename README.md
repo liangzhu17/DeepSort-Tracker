@@ -20,15 +20,9 @@ needed to run the tracker:
 
 Additionally, feature generation requires TensorFlow (>= 1.0).
 
-## Installation
-First, clone the repository. 
-Then, solve the environments and dependencies
-```
-pip install -r requirements.txt 
-```
 ## Data preparation
 
-* **DJI-Videos and csv files**
+* **Input-Videos and csv files**
 You should prepare the data in the following structure:
 The csv file which is derived from its video file should have the same number in their filenames.
 The string parts should ste
@@ -57,30 +51,6 @@ deepsort_tracker
 ```
 You can also change the input data directories in tracker_app.py function create_tracker_arg_parser()
 and in Crop_bbox_for_train.py function create_crop_arg_parser()
-
-## Running the tracker
-
-The following example starts the tracker on multiple mp4 videos.
-We assume resources have been put to the repository root directory seperately in video_dir_in and csv_dir_in:
-
-```
-python tracker_app.py \
-    --video_dir_in=./dataset/vid_input \
-    --csv_dir_in=./dataset/csv_input \
-    --video_dir_out=./tracker_output \
-    --model_path=./model_data/freeze_dji-10616.pb
-```
-
-## Prepare training data
-
-Run follows to create cropped image files from original videos with bounding box annotations.
- 
-```
-python Crop_bbox_for_train.py \
-    --video_dir_in=./dataset/vid_input \
-    --csv_dir_in=./dataset/csv_input \
-    --crop_dir_out=./dataset/data_crop_prep_try/train
-```
 
 ## Training the model
 
