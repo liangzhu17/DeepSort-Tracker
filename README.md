@@ -31,8 +31,8 @@ The string parts should ste
 deepsort_tracker
    |——————dataset
    |        └——————vid_input 
-   |        |            └——————string1_number1.mp4----(eg. DJI_08.mp4)
-   |        |            └——————string1_number2.mp4----(eg. DJI_12.mp4)
+   |        |            └——————string1_number1.mp4----(eg. vid_08.mp4)
+   |        |            └——————string1_number2.mp4----(eg. vid_12.mp4)
    |	    | 		 └——————...
    |	    |
    |        └——————csv_input (yolo bounding boxes)
@@ -46,7 +46,7 @@ deepsort_tracker
    |                                     └——————-... 
    |
    |——————model_data
-   |        └——————freeze_dji-10616.pb(default reid model after training)
+   |        └——————freeze_weights.pb(default reid model after training)
    .....
 ```
 You can also change the input data directories in tracker_app.py function create_tracker_arg_parser()
